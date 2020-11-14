@@ -1,0 +1,67 @@
+// out: ./Card.css
+
+.card {
+    overflow: hidden;
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    border: 1px solid #ff5c00;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #cecece;
+    transition: all 0.2s;
+    &:active {
+        box-shadow: none;
+        transform: scale(0.98);
+    }
+    &__left {
+        flex: 0 0 25%;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid #ff5c00;
+        .card__price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ff5c00;
+        }
+    }
+    &__right {
+        span {
+            color: #000;
+            font-weight: bold;
+        }
+        flex: 0 0 75%;
+        padding: 0 10px;
+        .card__addressCount {
+            font-size: 12px;
+            color: #707070;
+        }
+        .card__time {
+            font-size: 12px;
+            color: #707070;
+        }
+        .card__address {
+            margin: 5px 0;
+            .card__address1,
+            .card__address2 {
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 14px;
+            }
+        }
+        .card__product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            .card__info {
+                padding: 2px 10px;
+                margin-left: 5px;
+                color: #ff5c00;
+                border: 1px solid #ff5c00;
+                border-radius: 50px;
+            }
+        }
+    }
+}

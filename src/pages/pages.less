@@ -1,0 +1,122 @@
+// out: ./pages.css
+@import '../styles/index.less';
+
+.orders {
+    &__main {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: center;
+        min-height: calc(100vh - 142px);
+    }
+
+    &__empty {
+        width: 100%;
+        height: calc(100vh - 142px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            text-align: center;
+            font-size: 16px;
+            color: @grey;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        &--link {
+            // width: 150px;
+            text-align: center;
+            padding: 10px 0;
+            color: @grey;
+            &.active {
+                border-bottom: 1px solid @orange;
+                color: @orange;
+            }
+        }
+    }
+
+    .order-info {
+        .block {
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background-color: #fff;
+        }
+        .title {
+            font-size: 24px;
+            color: @orange;
+            font-weight: bold;
+        }
+        .label {
+            font-size: 12px;
+            color: @grey;
+        }
+        // .border;
+        // height: calc(100vh);
+        background-color: rgba(@grey, 0.5);
+        &__header {
+            .desclaimer {
+                padding-bottom: 10px;
+                text-align: center;
+                color: @grey;
+            }
+            .takeBtn {
+                padding: 15px 0;
+                text-align: center;
+                color: #fff;
+                border-radius: 50px;
+                background-color: @orange;
+                box-shadow: 0 0 10px @grey;
+                &:active {
+                    box-shadow: none;
+                    transform: scale(0.98);
+                }
+            }
+        }
+        &__detail {
+            .desc {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .product {
+                    padding: 2px 10px;
+                    margin-left: 5px;
+                    color: #ff5c00;
+                    border: 1px solid #ff5c00;
+                    border-radius: 50px;
+                }
+            }
+        }
+        .address {
+            .label {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+            &__block {
+                margin-left: 3px;
+                padding-left: 25px;
+                border-left: 2px solid @orange;
+            }
+            &__time {
+                span {
+                    font-weight: bold;
+                }
+            }
+            &__text {
+                font-weight: bold;
+            }
+            &__telephone {
+                a {
+                    text-decoration: underline;
+                    color: @orange;
+                }
+            }
+        }
+    }
+}
